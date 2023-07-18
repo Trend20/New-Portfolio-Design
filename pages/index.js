@@ -10,7 +10,17 @@ import Head from "next/head";
 import Button from "../components/Button/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor/Cursor";
-
+import {
+  SiJavascript,
+  SiReact,
+  SiAngular,
+  SiRedux,
+  SiTypescript,
+  SiMongodb,
+} from "react-icons/si";
+import { TbBrandNextjs, TbBrandReactNative } from "react-icons/tb";
+import { FaNodeJs } from "react-icons/fa";
+import { DiMaterializecss } from "react-icons/di";
 // Local Data
 import data from "../data/portfolio.json";
 
@@ -109,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
@@ -122,25 +132,81 @@ export default function Home() {
           </div>
         </div>
         {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
+        {/* {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>
             </Link>
           </div>
-        )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            I am a highly collaborative team player who thrives in dynamic and
-            fast-paced environments. My excellent communication and
-            problem-solving skills allow me to work effectively with
-            cross-functional teams to deliver solutions that exceed
-            expectations.
-          </p>
+        )} */}
+        <div
+          className="mt-10 laptop:mt-40 p-2 laptop:p-0"
+          ref={aboutRef}
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <div className="about-description">
+            <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
+            <p
+              className="tablet:m-10 mt-2 text- laptop:text-3xl w-full laptop:w-3/5"
+              style={{ fontSize: "24px", opacity: 0.5 }}
+            >
+              {data.aboutpara}
+            </p>
+            <p
+              className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5"
+              style={{ fontSize: "24px", opacity: 0.5 }}
+            >
+              I am a highly collaborative team player who thrives in dynamic and
+              fast-paced environments. My excellent communication and
+              problem-solving skills allow me to work effectively with
+              cross-functional teams to deliver solutions that exceed
+              expectations.
+            </p>
+          </div>
+          <div className="about-icons">
+            <h1 className="tablet:m-10 text-2xl text-bold">Stack</h1>
+            <div
+              className="tech"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 3fr)",
+                gridGap: "20px",
+              }}
+            >
+              <p>
+                <SiJavascript style={{ fontSize: 100, color: "#f0d824" }} />
+              </p>
+              <p>
+                <SiTypescript style={{ fontSize: 100, color: "#007acc" }} />
+              </p>
+              <p>
+                <SiReact style={{ fontSize: 100, color: "#0074a6" }} />
+              </p>
+              <p>
+                <SiAngular style={{ fontSize: 100, color: "#ed1123" }} />
+              </p>
+              <p>
+                <FaNodeJs style={{ fontSize: 100, color: "#026e00" }} />
+              </p>
+              <p>
+                <TbBrandNextjs style={{ fontSize: 100, color: "#0062d1" }} />
+              </p>
+              <p>
+                <DiMaterializecss style={{ fontSize: 100, color: "#3399FF" }} />
+              </p>
+              <p>
+                <SiRedux style={{ fontSize: 100, color: "#764abc" }} />
+              </p>
+              <p>
+                <TbBrandReactNative
+                  style={{ fontSize: 100, color: "#61dafb" }}
+                />
+              </p>
+              <p>
+                <SiMongodb style={{ fontSize: 100, color: "#001E2B" }} />
+              </p>
+            </div>
+          </div>
         </div>
         <Footer />
       </div>
