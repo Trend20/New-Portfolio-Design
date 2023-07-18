@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
-import Header from "../components/Header";
+import Button from "../components/Button/Button";
+import Header from "../components/Header/Header";
 import { v4 as uuidv4 } from "uuid";
 import { useTheme } from "next-themes";
 
 // Data
 import yourData from "../data/portfolio.json";
-import Cursor from "../components/Cursor";
+import Cursor from "../components/Cursor/Cursor";
 
 const Edit = () => {
   // states

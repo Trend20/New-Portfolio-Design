@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import { getPostBySlug, getAllPosts } from "../../utils/api";
-import Header from "../../components/Header";
-import ContentSection from "../../components/ContentSection";
-import Footer from "../../components/Footer";
+import Header from "../../components/Header/Header";
+import ContentSection from "../../components/ContentSection/ContentSection";
+import Footer from "../../components/Footer/Footer";
 import Head from "next/head";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
-import Button from "../../components/Button";
-import BlogEditor from "../../components/BlogEditor";
+import Button from "../../components/Button/Button";
+import BlogEditor from "../../components/BlogEditor/BlogEditor";
 import { useRouter } from "next/router";
-import Cursor from "../../components/Cursor";
+import Cursor from "../../components/Cursor/Cursor";
 import data from "../../data/portfolio.json";
 
 const BlogPost = ({ post }) => {

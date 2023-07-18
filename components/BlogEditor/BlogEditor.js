@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import Button from "../../components/Button/Button";
 import DatePicker from "react-datepicker";
 import TextareaAutosize from "react-textarea-autosize";
 import { useTheme } from "next-themes";

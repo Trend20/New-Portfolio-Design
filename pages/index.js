@@ -1,15 +1,15 @@
 import { useRef } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
+import Header from "../components/Header/Header";
+import ServiceCard from "../components/ServiceCard/ServiceCard";
+import Socials from "../components/Socials/Socials";
+import WorkCard from "../components/WorkCard/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import Head from "next/head";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import Link from "next/link";
-import Cursor from "../components/Cursor";
+import Cursor from "../components/Cursor/Cursor";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -133,6 +133,13 @@ export default function Home() {
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
+          </p>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+            I am a highly collaborative team player who thrives in dynamic and
+            fast-paced environments. My excellent communication and
+            problem-solving skills allow me to work effectively with
+            cross-functional teams to deliver solutions that exceed
+            expectations.
           </p>
         </div>
         <Footer />
