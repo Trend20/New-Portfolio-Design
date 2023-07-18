@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import Cursor from "../components/Cursor";
-import Header from "../components/Header";
-import ProjectResume from "../components/ProjectResume";
-import Socials from "../components/Socials";
-import Button from "../components/Button";
+import Cursor from "../components/Cursor/Cursor";
+import Header from "../components/Header/Header";
+import ProjectResume from "../components/ProjectResume/ProjectResume";
+import Socials from "../components/Socials/Socials";
+import Button from "../components/Button/Button";
 import { useTheme } from "next-themes";
 // Data
 import { name, showResume } from "../data/portfolio.json";
