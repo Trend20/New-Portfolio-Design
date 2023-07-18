@@ -75,3 +75,30 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  #about-contents{
+    flex-direction: column;
+  }
+
+  .about-icons{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  .about-icons h1{
+    padding: 20px 30px;
+  }
+
+  .tech{
+    width: 100%;
+  }
+
+  .tech p{
+    width: 50%;
+  }
+}

@@ -143,6 +143,7 @@ export default function Home() {
           className="mt-10 laptop:mt-40 p-2 laptop:p-0"
           ref={aboutRef}
           style={{ display: "flex", alignItems: "center" }}
+          id="about-contents"
         >
           <div className="about-description">
             <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
@@ -180,30 +181,30 @@ export default function Home() {
                 <SiTypescript style={{ fontSize: 100, color: "#007acc" }} />
               </p>
               <p>
-                <SiReact style={{ fontSize: 100, color: "#0074a6" }} />
+                <SiReact style={{ fontSize: 70, color: "#0074a6" }} />
               </p>
               <p>
-                <SiAngular style={{ fontSize: 100, color: "#ed1123" }} />
+                <SiAngular style={{ fontSize: 70, color: "#ed1123" }} />
               </p>
               <p>
-                <FaNodeJs style={{ fontSize: 100, color: "#026e00" }} />
+                <FaNodeJs style={{ fontSize: 70, color: "#026e00" }} />
               </p>
               <p>
-                <TbBrandNextjs style={{ fontSize: 100, color: "#0062d1" }} />
+                <TbBrandNextjs style={{ fontSize: 70, color: "#0062d1" }} />
               </p>
               <p>
-                <DiMaterializecss style={{ fontSize: 100, color: "#3399FF" }} />
+                <DiMaterializecss style={{ fontSize: 70, color: "#3399FF" }} />
               </p>
               <p>
-                <SiRedux style={{ fontSize: 100, color: "#764abc" }} />
+                <SiRedux style={{ fontSize: 70, color: "#764abc" }} />
               </p>
               <p>
                 <TbBrandReactNative
-                  style={{ fontSize: 100, color: "#61dafb" }}
+                  style={{ fontSize: 70, color: "#61dafb" }}
                 />
               </p>
               <p>
-                <SiMongodb style={{ fontSize: 100, color: "#001E2B" }} />
+                <SiMongodb style={{ fontSize: 70, color: "#001E2B" }} />
               </p>
             </div>
           </div>
