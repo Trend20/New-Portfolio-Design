@@ -1,6 +1,7 @@
 import React from "react";
-import Image from "next/image";
-const WorkCard = ({ img, name, description, onClick }) => {
+import Link from "next/link";
+import { BiLinkExternal} from 'react-icons/bi';
+const WorkCard = ({ img, name, description, onClick, url }) => {
   return (
     <div
       className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
@@ -22,6 +23,9 @@ const WorkCard = ({ img, name, description, onClick }) => {
       <h2 className="text-xl opacity-50">
         {description ? description : "Description"}
       </h2>
+      <Link href={url}>
+        <BiLinkExternal size={40} />
+      </Link>
     </div>
   );
 };

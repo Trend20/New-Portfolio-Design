@@ -6,6 +6,7 @@
 
 * {
   font-family: "Hind";
+  /*overflow-x: hidden;*/
 }
 
 body {
@@ -87,11 +88,11 @@ body {
   .about-icons{
     display: flex;
     flex-direction: column;
-    padding: 50px;
   }
 
   .about-icons h1{
-    padding: 20px 30px;
+    padding: 20px 0;
+    margin-left: -25px !important;
   }
 
   .tech{

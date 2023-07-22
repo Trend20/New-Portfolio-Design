@@ -1,14 +1,14 @@
 import { useRef } from "react";
 import Header from "../components/Header/Header";
-import ServiceCard from "../components/ServiceCard/ServiceCard";
+// import ServiceCard from "../components/ServiceCard/ServiceCard";
 import Socials from "../components/Socials/Socials";
 import WorkCard from "../components/WorkCard/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer/Footer";
 import Head from "next/head";
-import Button from "../components/Button/Button";
-import Link from "next/link";
+// import Button from "../components/Button/Button";
+// import Link from "next/link";
 import Cursor from "../components/Cursor/Cursor";
 import {
   SiJavascript,
@@ -110,6 +110,7 @@ export default function Home() {
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
+                url={project.url}
                 img={project.imageSrc}
                 name={project.title}
                 description={project.description}
@@ -119,18 +120,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div>
+        {/*<div className="mt-10 laptop:mt-40 p-2 laptop:p-0">*/}
+        {/*  <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>*/}
+        {/*  <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">*/}
+        {/*    {data.services.map((service, index) => (*/}
+        {/*      <ServiceCard*/}
+        {/*        key={index}*/}
+        {/*        name={service.title}*/}
+        {/*        description={service.description}*/}
+        {/*      />*/}
+        {/*    ))}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         {/* This button should not go into production */}
         {/* {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
@@ -175,36 +176,36 @@ export default function Home() {
               }}
             >
               <p>
-                <SiJavascript style={{ fontSize: 100, color: "#f0d824" }} />
+                <SiJavascript style={{ fontSize: 60, color: "#f0d824" }} />
               </p>
               <p>
-                <SiTypescript style={{ fontSize: 100, color: "#007acc" }} />
+                <SiTypescript style={{ fontSize: 60, color: "#007acc" }} />
               </p>
               <p>
-                <SiReact style={{ fontSize: 70, color: "#0074a6" }} />
+                <SiReact style={{ fontSize: 60, color: "#0074a6" }} />
               </p>
               <p>
-                <SiAngular style={{ fontSize: 70, color: "#ed1123" }} />
+                <SiAngular style={{ fontSize: 60, color: "#ed1123" }} />
               </p>
               <p>
-                <FaNodeJs style={{ fontSize: 70, color: "#026e00" }} />
+                <FaNodeJs style={{ fontSize: 60, color: "#026e00" }} />
               </p>
               <p>
-                <TbBrandNextjs style={{ fontSize: 70, color: "#0062d1" }} />
+                <TbBrandNextjs style={{ fontSize: 60, color: "#0062d1" }} />
               </p>
               <p>
-                <DiMaterializecss style={{ fontSize: 70, color: "#3399FF" }} />
+                <DiMaterializecss style={{ fontSize: 60, color: "#3399FF" }} />
               </p>
               <p>
-                <SiRedux style={{ fontSize: 70, color: "#764abc" }} />
+                <SiRedux style={{ fontSize: 60, color: "#764abc" }} />
               </p>
               <p>
                 <TbBrandReactNative
-                  style={{ fontSize: 70, color: "#61dafb" }}
+                  style={{ fontSize: 60, color: "#61dafb" }}
                 />
               </p>
               <p>
-                <SiMongodb style={{ fontSize: 70, color: "#001E2B" }} />
+                <SiMongodb style={{ fontSize: 60, color: "#234526" }} />
               </p>
             </div>
           </div>
