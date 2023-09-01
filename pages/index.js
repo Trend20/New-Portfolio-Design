@@ -5,7 +5,6 @@ import WorkCard from "../components/WorkCard/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer/Footer";
-// import Head from "next/head";
 import Cursor from "../components/Cursor/Cursor";
 import {
   SiJavascript,
@@ -58,10 +57,6 @@ export default function Home() {
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`} style={{ overflow:'hidden', height:'100%', width:'100%'}}>
       {data.showCursor && <Cursor />}
-      {/*<Head>*/}
-      {/*  <img src='/images/logo.png' alt="logo"/>*/}
-      {/*</Head>*/}
-
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
 
