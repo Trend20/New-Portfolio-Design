@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
+import Logo from '../../public/images/logo.png';
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                {name}.
+                  <img src={Logo} alt="logo"/>
               </h1>
 
               <div className="flex items-center">
@@ -75,7 +76,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
-                  {/* {showBlog && (
+                  {/* {showBlog && ( {name}
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )} */}
                   {showResume && (
@@ -139,7 +140,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
+            <img src='/images/logo.png' alt="logo"/>
         </h1>
         {!isBlog ? (
           <div className="flex">

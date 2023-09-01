@@ -20,7 +20,6 @@ import { FaNodeJs } from "react-icons/fa";
 import { DiMaterializecss } from "react-icons/di";
 // Local Data
 import data from "../data/portfolio.json";
-import Logo from '../public/images/logo.png';
 
 export default function Home() {
   // Ref
@@ -59,10 +58,10 @@ export default function Home() {
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`} style={{ overflow:'hidden', height:'100%', width:'100%'}}>
       {data.showCursor && <Cursor />}
-      <Head>
+      {/*<Head>*/}
         {/*<title>{data.name}</title>*/}
-        <img src={Logo} alt="logo"/>
-      </Head>
+        {/*<img src={Logo} alt="logo"/>*/}
+      {/*</Head>*/}
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
