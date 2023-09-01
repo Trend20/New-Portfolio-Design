@@ -1,14 +1,11 @@
 import { useRef } from "react";
 import Header from "../components/Header/Header";
-// import ServiceCard from "../components/ServiceCard/ServiceCard";
 import Socials from "../components/Socials/Socials";
 import WorkCard from "../components/WorkCard/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer/Footer";
 import Head from "next/head";
-// import Button from "../components/Button/Button";
-// import Link from "next/link";
 import Cursor from "../components/Cursor/Cursor";
 import {
   SiJavascript,
@@ -23,6 +20,7 @@ import { FaNodeJs } from "react-icons/fa";
 import { DiMaterializecss } from "react-icons/di";
 // Local Data
 import data from "../data/portfolio.json";
+import Logo from '../public/images/logo.png';
 
 export default function Home() {
   // Ref
@@ -59,10 +57,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative ${data.showCursor && "cursor-none"}`} style={{ overflow:'hidden', height:'100%', width:'100%'}}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name}</title>
+        {/*<title>{data.name}</title>*/}
+        <img src={Logo} alt="logo"/>
       </Head>
 
       <div className="gradient-circle"></div>
@@ -73,7 +72,7 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-        <div className="laptop:mt-20 mt-10">
+        <div className="laptop:mt-20 mt-10" style={{marginTop:'230px'}}>
           <div className="mt-5">
             <h1
               ref={textOne}
@@ -100,10 +99,9 @@ export default function Home() {
               {data.headerTaglineFour}
             </h1>
           </div>
-
           <Socials className="mt-2 laptop:mt-5" />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef} style={{marginTop:'230px', overflow:"hidden"}}>
           <h1 className="text-2xl text-bold">Work.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
@@ -143,7 +141,7 @@ export default function Home() {
         <div
           className="mt-10 laptop:mt-40 p-2 laptop:p-0"
           ref={aboutRef}
-          style={{ display: "flex", alignItems: "center" }}
+          style={{ display: "flex", alignItems: "center", padding:'70px 0' }}
           id="about-contents"
         >
           <div className="about-description">

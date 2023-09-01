@@ -4,7 +4,7 @@ import { BiLinkExternal} from 'react-icons/bi';
 const WorkCard = ({ img, name, description, onClick, url }) => {
   return (
     <div
-      className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
+      className="overflow-hidden rounded-lg p-2 laptop:p-30 first:ml-0 link"
       onClick={onClick}
     >
       <div
