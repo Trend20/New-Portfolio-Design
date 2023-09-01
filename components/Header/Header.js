@@ -6,7 +6,6 @@ import Button from "../Button/Button";
 import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
-import Logo from '../../public/images/logo.png';
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -29,7 +28,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 onClick={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
-                  <img src={Logo} alt="logo"/>
+                  <img src='/images/logo.png' alt="logo"/>
               </h1>
 
               <div className="flex items-center">
