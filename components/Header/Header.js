@@ -3,7 +3,6 @@ import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
-import Image from "next/image";
 // Local Data
 import data from "../../data/portfolio.json";
 
