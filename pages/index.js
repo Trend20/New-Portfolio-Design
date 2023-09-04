@@ -55,7 +55,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`} style={{ overflow:'hidden', height:'100%', width:'100%'}}>
+    <div
+      className={`relative ${data.showCursor && "cursor-none"}`}
+      style={{ overflow: "hidden", height: "100%", width: "100%" }}
+    >
       {data.showCursor && <Cursor />}
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -65,7 +68,11 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-        <div className="laptop:mt-20 mt-10" style={{marginTop:'230px'}}>
+        <div
+          className="laptop:mt-20 mt-10"
+          style={{ marginTop: "230px" }}
+          id="hero"
+        >
           <div className="mt-5">
             <h1
               ref={textOne}
@@ -94,7 +101,11 @@ export default function Home() {
           </div>
           <Socials className="mt-2 laptop:mt-5" />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef} style={{marginTop:'230px', overflow:"hidden"}}>
+        <div
+          className="mt-10 laptop:mt-30 p-2 laptop:p-0"
+          ref={workRef}
+          style={{ marginTop: "230px", overflow: "hidden" }}
+        >
           <h1 className="text-2xl text-bold">Work.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
@@ -134,20 +145,20 @@ export default function Home() {
         <div
           className="mt-10 laptop:mt-40 p-2 laptop:p-0"
           ref={aboutRef}
-          style={{ display: "flex", alignItems: "center", padding:'70px 0' }}
+          style={{ display: "flex", alignItems: "center", padding: "70px 0" }}
           id="about-contents"
         >
           <div className="about-description">
             <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
             <p
               className="tablet:m-10 mt-2 text- laptop:text-3xl w-full laptop:w-3/5"
-              style={{ fontSize: "24px", opacity: 0.5 }}
+              style={{ fontSize: "20px", opacity: 0.5 }}
             >
               {data.aboutpara}
             </p>
             <p
               className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5"
-              style={{ fontSize: "24px", opacity: 0.5 }}
+              style={{ fontSize: "20px", opacity: 0.5 }}
             >
               I am a highly collaborative team player who thrives in dynamic and
               fast-paced environments. My excellent communication and
